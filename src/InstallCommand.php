@@ -1,5 +1,5 @@
 <?php
-namespace Apidoc;
+namespace Ycpfzf\Apidoc;
 use Illuminate\Console\Command;
 
 class InstallCommand extends Command

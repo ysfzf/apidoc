@@ -1,5 +1,5 @@
 <?php
-namespace Apidoc;
+namespace Ycpfzf\Apidoc;
 
 class Doc
 {

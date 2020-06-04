@@ -1,9 +1,8 @@
 <?php
 use Illuminate\Routing\Router;
-
 Route::group([
     'prefix'        => config('doc.prefix','doc'),
-    'namespace'     => 'App\\Doc\\Controllers',
+    'namespace'     => 'Ycpfzf\Apidoc',
     'middleware'    => [Illuminate\Session\Middleware\StartSession::class],
 ], function (Router $router) {
     $router->get('/', 'DocController@index');

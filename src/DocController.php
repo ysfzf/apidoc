@@ -1,5 +1,5 @@
 <?php
-namespace App\Doc\Controllers;
+namespace Ycpfzf\Apidoc;
 
 use App\Doc\Doc;
 use Illuminate\Http\Request;

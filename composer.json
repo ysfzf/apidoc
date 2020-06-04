@@ -1,5 +1,5 @@
 {
-    "name": "apidoc/apidoc",
+    "name": "ycpfzf/apidoc",
     "description": "laravel api doc",
     "type": "library",
     "keywords": ["laravel", "doc", "api"],
@@ -21,14 +21,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Apidoc\\": "src/"
-        },
+            "Ycpfzf\\Apidoc\\": "src/"
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Apidoc\\DocServiceProvider"
-            ],
+                "Ycpfzf\\Apidoc\\DocServiceProvider"
+            ]
         }
     }
 }

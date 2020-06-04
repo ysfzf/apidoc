@@ -1,6 +1,5 @@
 <?php
-
-namespace Apidoc;
+namespace Ycpfzf\Apidoc;
 
 use Illuminate\Support\ServiceProvider;
 
