@@ -23,7 +23,7 @@ class DocServiceProvider extends ServiceProvider
     public function boot()
     {
         $path=config('doc.directory');
-        $this->loadRoutesFrom(app_path($path).'/routes.php');
+        $this->loadRoutesFrom(base_path().'/routes/doc.php');
     }
 
 
