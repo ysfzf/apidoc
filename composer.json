@@ -5,7 +5,8 @@
     "keywords": ["laravel", "doc", "api"],
     "homepage": "https://github.com/z-song/laravel-admin",
     "license": "MIT",
-    "version": "v1.0.0",
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "fzf",
