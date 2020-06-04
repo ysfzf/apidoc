@@ -1,0 +1,34 @@
+{
+    "name": "apidoc/apidoc",
+    "description": "laravel api doc",
+    "type": "library",
+    "keywords": ["laravel", "doc", "api"],
+    "homepage": "https://github.com/z-song/laravel-admin",
+    "license": "MIT",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "fzf",
+            "email": "ysfzf@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=5.5"
+    },
+    "require-dev": {
+        "laravel/laravel": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apidoc\\": "src/"
+        },
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Apidoc\\DocServiceProvider"
+            ],
+        }
+    }
+}
