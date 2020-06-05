@@ -1,7 +1,6 @@
 <?php
 namespace Ycpfzf\Apidoc;
 
-use App\Doc\Doc;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -80,36 +79,10 @@ class DocController extends Controller
      */
     protected function show($name, $vars = [])
     {
-
         $this->assign=array_merge($this->assign,$vars);
         $view_path="{$this->doc->static_path}/views/{$name}.blade.php";
-
-        return \Illuminate\Support\Facades\View::file($view_path,$this->assign);
+        return view('doc::'.$name,$this->assign);
     }
-
-
-    /**
-     * 解析资源
-     * @return $this
-     */
-    public function assets()
-    {
-        $assets_path = __DIR__.DS.'assets'.DS;
-        $path = str_replace("doc/assets", "", $this->request->pathinfo());
-        $ext = $this->request->ext();
-        if($ext)
-        {
-            $type= "text/html";
-            $content = file_get_contents($assets_path.$path);
-            if(array_key_exists($ext, $this->mimeType))
-            {
-                $type = $this->mimeType[$ext];
-            }
-            return response($content, 200, ['Content-Length' => strlen($content)])->contentType($type);
-        }
-    }
-
-
 
     /**
      * 登录

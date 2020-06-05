@@ -1,6 +1,5 @@
 <?php
 return [
-    'directory'=>'Doc',
     'prefix'=>'doc', //访问前缀
     'title' => "APi接口文档",  //文档title
     'version'=>'1.0.0', //文档版本
@@ -9,17 +8,15 @@ return [
     'static_path' => 'apidoc', //视图，css,js文件路径
     'controller' => [
         //需要生成文档的类
-        'App\Http\Controllers\Api\Auth',
         'App\Http\Controllers\Api\Index'
     ],
     'filter_method' => [
         //过滤 不解析的方法名称
-        '_empty'
     ],
     'return_format' => [
         //数据格式
-        'code' => "1/200/300/301/302",
-        'msg' => "提示信息",
+        'status_code' => "1/200/300/301/302",
+        'message' => "提示信息",
         "time"=> '时间戳',
     ],
     'public_header' => [
