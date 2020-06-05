@@ -1,5 +1,5 @@
 ## 使用方法
-这是一个轻量级的在laravel上使用的接口文档自动生成工具包。这个项目来源于ThinkPHP5的相同工具[ThinkPHP5的相同工具](https://github.com/skywalkerwei/yapi)，感谢原作者的付出。
+这是一个轻量级的在laravel上使用的接口文档自动生成工具包。这个项目来源于[ThinkPHP5的相同工具](https://github.com/skywalkerwei/yapi)，感谢原作者的付出。
 
 #### 安装
 
