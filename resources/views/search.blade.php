@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{$title}}</title>
+    <title>{{$title??''}}</title>
     <base href="/{{$static}}" />
     <link href='/{{$static}}/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='/{{$static}}/css/style.css' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
 <body>
 <div class="container">
     <div class="title">
-        <h1>{{$title}}</h1>
+        <h1>{{$title??''}}</h1>
     </div>
 
     <div class="module">
@@ -40,7 +40,7 @@
                         </ul>
                     </li>
                 @else
-                    <li role="presentation"><a href="javascript:;" module>{{$group['title']}}</a></li>
+                    <li role="presentation"><a href="javascript:;" module>{{$group['title']??''}}</a></li>
                 @endisset
             @endforeach
         </ul>
