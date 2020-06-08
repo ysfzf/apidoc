@@ -1,14 +1,27 @@
 <?php
+
+/* env配置示例
+    DOC_PREFIX=doc
+    DOC_API_PREFIX=
+    DOC_TITLE=API文档
+    DOC_VERSION=1.0
+    DOC_COPYRIGHT='Powered By ypai'
+    DOC_PASSWORD=
+
+ */
 return [
-    'prefix'=>'doc', //访问前缀
-    'title' => "APi接口文档",  //文档title
-    'version'=>'1.0.0', //文档版本
-    'copyright'=>'Powered By ypai', //版权信息
-    'password' => '', //访问密码，为空不需要密码
+    'prefix'=>env('DOC_PREFIX','doc'), //访问前缀
+    'api_prefix'=>env('DOC_API_PREFIX',''), //api请求前缀
+    'title' => env('DOC_TITLE','APi接口文档'),  //文档title
+    'version'=>env('DOC_VERSION','1.0.0'), //文档版本
+    'copyright'=>env('DOC_COPYRIGHT','Powered By ypai'), //版权信息
+    'password' => env('DOC_PASSWORD',''), //访问密码，为空不需要密码
+    
     'static_path' => 'apidoc', //视图，css,js文件路径
     'controller' => [
         //需要生成文档的类
-        'App\Http\Controllers\Api\Index'
+        'App\Http\Controllers\Api\Auth',
+        'App\Http\Controllers\Api\Index',
     ],
     'filter_method' => [
         //过滤 不解析的方法名称
