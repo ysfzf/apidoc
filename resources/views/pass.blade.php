@@ -50,13 +50,13 @@
                 alert("请输入密码");$("#pass").focus();
             }else{
                 $.ajax({
-                    url: "{{$root}}/doc/login",
+                    url: "{{$url}}/login",
                     data: {pass: $("#pass").val() },
                     method:'post',
                     dataType: "json",
                     success: function(data){
                         if(data.status == 200){
-                            location.href = "/doc";
+                            location.href = "{{$url}}";
                         }else{
                             alert(data.message);
                         }

@@ -11,9 +11,7 @@ use Illuminate\Support\Facades\Session;
 class DocController extends Controller
 {
     const PWD_KEY='apidoc_password';
-
     protected $doc;
-
     protected $assign=[];
     protected $mimeType = [
         'xml'  => 'application/xml,text/xml,application/x-xml',
@@ -44,8 +42,7 @@ class DocController extends Controller
             'static'=>$this->doc->static_path.'/assets',
             'root'=>$root,
             'url'=>$root.'/'.$this->doc->prefix,
-            'api'=>$this->doc->api_prefix
-
+            'api'=>empty($this->doc->api_prefix)?'':$this->doc->api_prefix
         ];
     }
 
@@ -74,6 +71,7 @@ class DocController extends Controller
      * @param array $replace
      * @param array $config
      * @return string
+     *
      */
     protected function show($name, $vars = [])
     {
@@ -92,7 +90,6 @@ class DocController extends Controller
             $pass = $this->doc->__get("password");
             if($pass && $request->post('pass') === $pass){
                session([self::PWD_KEY=>md5($pass)]);
-
                 return ['status' => '200', 'message' => '登录成功'];
             }else if(!$pass){
                 return ['status' => '200', 'message' => '登录成功'];
@@ -101,10 +98,7 @@ class DocController extends Controller
             }
             return ['status' => '500', 'message' => '未知错误'];
         }
-
-
         return $this->show('pass');
-
     }
 
     /**
@@ -113,11 +107,10 @@ class DocController extends Controller
      */
     public function index(Request $request)
     {
-
         if($this->checkLogin()){
             return $this->show('index', ['doc' => $request->input('doc')]);
         }else{
-            return redirect('doc/login');
+            return redirect($this->doc->prefix.'/login');
         }
     }
 
