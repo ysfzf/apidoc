@@ -11,10 +11,7 @@ use Illuminate\Support\Facades\Session;
 class DocController extends Controller
 {
     const PWD_KEY='apidoc_password';
-    protected $root = "";
 
-    protected $request;
-    protected $view;
     protected $doc;
 
     protected $assign=[];
@@ -46,7 +43,8 @@ class DocController extends Controller
             'copyright'=>$this->doc->copyright,
             'static'=>$this->doc->static_path.'/assets',
             'root'=>$root,
-            'url'=>$root.'/'.$this->doc->prefix
+            'url'=>$root.'/'.$this->doc->prefix,
+            'api'=>$this->doc->api_prefix
 
         ];
     }

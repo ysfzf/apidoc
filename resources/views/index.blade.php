@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{$title}}</title>
+    <title>{{$title??'api文档'}}</title>
     <base href="/{{$static}}" />
     <link href='/{{$static}}/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='/{{$static}}/css/style.css' rel='stylesheet' type='text/css'>
@@ -16,9 +16,9 @@
 </head>
 <body>
 <div class="zt_header">
-    {{$title}}
-    <span>{{$version}}</span>
-    <span class="zt_download">{{$copyright}}</span>
+    {{$title??''}}
+    <span>{{$version??''}}</span>
+    <span class="zt_download">{{$copyright??''}}</span>
 </div>
 <div class="zt_main">
     <div class="zt_navi">

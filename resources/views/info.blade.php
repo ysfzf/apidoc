@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{$title}}</title>
+    <title>{{$title??'api文档'}}</title>
     <base href="/{{$static}}" />
     <link href='/{{$static}}/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='/{{$static}}/css/style.css' rel='stylesheet' type='text/css'>
@@ -14,12 +14,11 @@
 <body>
 <div class="container">
     <div class="jumbotron">
-        <!-- <p class="bg-success" style="font-size: 18px;">文档地址：{$root}/doc?name={$doc['name']}</p> -->
-        <h2>{{$doc['title']}}</h2>
-        <p>地址：{{$doc['url']}} <span class="label label-success">{{$doc['method']}}</span></p>
-        <!-- <p class="text-primary">{$doc.title|default="请设置title注释"} -- {$doc.author|default="请设置auhtor注释"}</p>
-        <br/> -->
-        <p class="bg-success">{{$doc['description']}}</p>
+
+        <h2>{{$doc['title']??'未知'}}</h2>
+        <p>地址：{{$api}}{{$doc['url']??''}} <span class="label label-success">{{$doc['method']??''}}</span></p>
+
+        <p class="bg-success">{{$doc['description']??''}}</p>
 
         <ul id="myTab" class="nav nav-tabs">
             <li class="active"><a href="#info" data-toggle="tab">接口信息</a></li>
