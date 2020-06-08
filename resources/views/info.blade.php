@@ -348,8 +348,8 @@
         $('#addJosnTextmModal').on('hide.bs.modal', function () {
             //关闭
         })
-        window.ImgCollapsed = "{$static}/img/Collapsed.gif";
-        window.ImgExpanded = "{$static}/img/Expanded.gif";
+        window.ImgCollapsed = "/{{$static}}/img/Collapsed.gif";
+        window.ImgExpanded = "/{{$static}}/img/Expanded.gif";
     });
 
     // function init(){

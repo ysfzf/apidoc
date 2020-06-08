@@ -30,17 +30,17 @@
             @foreach($module as $group)
                 @isset($group['children'])
                     <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" role="button" aria-haspopup="true" aria-expanded="false">
                             {{$group['title']}} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             @foreach($group['children'] as $val)
-                            <li role="presentation"><a href="#" module>{{$val['title']}}</a></li>
+                            <li role="presentation"><a href="javascript:;" module>{{$val['title']}}</a></li>
                             @endforeach
                         </ul>
                     </li>
                 @else
-                    <li role="presentation"><a href="#" module>{{$group['title']}}</a></li>
+                    <li role="presentation"><a href="javascript:;" module>{{$group['title']}}</a></li>
                 @endisset
             @endforeach
         </ul>
