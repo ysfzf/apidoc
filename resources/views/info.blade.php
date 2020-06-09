@@ -300,13 +300,7 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $('#addParamModal').on('show.bs.modal', function () {
-            // init();
-        })
-        $('#addParamModal').on('hide.bs.modal', function () {
-            //关闭
-        })
-
+       
 
         $("#send").click(function(){
             var $btn = $(this).button('loading');
@@ -327,7 +321,11 @@
                     $btn.button('reset');
                 },
                 error:function(data){
-                    window.json =JSON.stringify(data);
+                    if(data.responseText){
+                        window.json =data.responseText;
+                    }else{
+                        window.json =JSON.stringify(data);
+                    }
                     Process();
                     $btn.button('reset');
                 },
@@ -340,13 +338,7 @@
             });
         });
 
-        // 添加自定义json
-        $('#addJosnTextmModal').on('show.bs.modal', function () {
-            // init();
-        })
-        $('#addJosnTextmModal').on('hide.bs.modal', function () {
-            //关闭
-        })
+       
         window.ImgCollapsed = "/{{$static}}/img/Collapsed.gif";
         window.ImgExpanded = "/{{$static}}/img/Expanded.gif";
     });
