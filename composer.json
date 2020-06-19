@@ -3,7 +3,7 @@
     "description": "laravel api doc",
     "type": "library",
     "keywords": ["laravel", "doc", "api"],
-    "homepage": "https://github.com/z-song/laravel-admin",   
+    "homepage": "https://github.com/mynameisfzf/apidoc",   
     "license": "Apache-2.0",
     "minimum-stability": "dev",
     "authors": [
@@ -23,5 +23,12 @@
         "psr-4": {
             "Ycpfzf\\Apidoc\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ycpfzf\\Apidoc\\DocServiceProvider"
+            ]           
+        }
+    }    
 }
