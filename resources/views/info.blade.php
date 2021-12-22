@@ -91,8 +91,20 @@
                     <div class="panel-heading" style="border-color: #00A881;background-color: #00A881">
                         <h3>返回结果</h3>
                     </div>
+{{--                    <div class="panel-body" id="span_result">--}}
+{{--                        <p><code id="json_text">{!! $return??'' !!}</code></p>--}}
+{{--                    </div>--}}
                     <div class="panel-body" id="span_result">
-                        <p><code id="json_text">{!! $return??'' !!}</code></p>
+                        <table class="table table-striped" >
+                            <tr><th>参数名字</th><th>类型</th><th>说明</th></tr>
+                            @foreach($return as $param)
+                                <tr>
+                                    <td>{{$param['name']??''}}</td>
+                                    <td>{{$param['type']??''}}</td>
+                                    <td>{{$param['desc']??''}}</td>
+                                </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
                 <!-- <h3>返回结果</h3>
@@ -300,7 +312,7 @@
 </div>
 <script type="text/javascript">
     $(function () {
-       
+
 
         $("#send").click(function(){
             var $btn = $(this).button('loading');
@@ -338,7 +350,7 @@
             });
         });
 
-       
+
         window.ImgCollapsed = "/{{$static}}/img/Collapsed.gif";
         window.ImgExpanded = "/{{$static}}/img/Expanded.gif";
     });

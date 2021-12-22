@@ -76,7 +76,7 @@ class DocController extends Controller
     protected function show($name, $vars = [])
     {
         $this->assign=array_merge($this->assign,$vars);
-        $view_path="{$this->doc->static_path}/views/{$name}.blade.php";
+//        $view_path="{$this->doc->static_path}/views/{$name}.blade.php";
         return view('doc::'.$name,$this->assign);
     }
 
@@ -176,7 +176,6 @@ class DocController extends Controller
     {
         $name=$request->get('name','');
         list($class, $action) = explode("::", $name);
-        //dd($class ,$action);
         $action_doc = $this->doc->getInfo($class, $action);
         if($action_doc)
         {

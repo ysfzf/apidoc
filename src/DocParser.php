@@ -70,13 +70,14 @@ class DocParser
     }
 
     private function setParam($param, $value) {
-        if ($param == 'param' || $param == 'header')
-            $value = $this->formatParam( $value );
+//        if ($param == 'param' || $param == 'header')
+//            $value = $this->formatParam( $value );
         if ($param == 'class')
             list ( $param, $value ) = $this->formatClass ( $value );
 
         if($param == 'return' || $param == 'param' || $param == 'header'){
-            $this->params [$param][] = $value;
+//            $this->params [$param][] = $value;
+            $this->params [$param][] = $this->formatParam( $value );
         }else if (empty ( $this->params [$param] )) {
             $this->params [$param] = $value;
         } else {
