@@ -328,7 +328,7 @@ class Doc
         }
         $key=array_shift($keys);
         $array['_children'][$key]['name']=$key;
-        $array['_children'][$key]['type']=DocParser::getParamType($value['type'])??'';
+        $array['_children'][$key]['type']=DocParser::getParamType($value['type']??'');
         $array['_children'][$key]['desc']=$value['desc']??'';
         return $array;
     }
