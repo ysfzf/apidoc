@@ -14,7 +14,7 @@ class Doc
         'controller' => [],
         'filter_method'=>['_empty'],
         'return_format' => [
-            'status' => "200/300/301/302",
+            'status' => "200",
             'message' => "提示信息",
         ]
     ];
@@ -302,9 +302,7 @@ class Doc
                     }
                 }
             }
-//            if(isset($returns['_children'])){
-//                 $result=array_merge($result,$returns['_children']);
-//            }
+ 
             $result=$returns['_children']??[];
         }
         return $this->treeToString($result);
