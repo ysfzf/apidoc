@@ -91,9 +91,7 @@
                     <div class="panel-heading" style="border-color: #00A881;background-color: #00A881">
                         <h3>返回结果</h3>
                     </div>
-{{--                    <div class="panel-body" id="span_result">--}}
-{{--                        <p><code id="json_text">{!! $return??'' !!}</code></p>--}}
-{{--                    </div>--}}
+
                     <div class="panel-body" id="span_result">
                         <table class="table table-striped" >
                             <tr><th>参数名字</th><th>类型</th><th>说明</th></tr>
@@ -107,8 +105,7 @@
                         </table>
                     </div>
                 </div>
-                <!-- <h3>返回结果</h3>
-                <p><code>de id="json_text">{$return}</code></p> -->
+
             </div>
             <!--info-->
             <!--test-->
