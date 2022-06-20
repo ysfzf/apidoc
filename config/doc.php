@@ -37,7 +37,7 @@ return [
         //如：['name'=>'version', 'require'=>1, 'default'=>'', 'desc'=>'版本号(全局)']
     ],
     'public_param' => [
-        //全局公共请求参数，设置了所以的接口会自动增加次参数
+        //全局公共请求参数，设置了所以的接口会自动增加此参数
         //如：['name'=>'token', 'type'=>'string', 'require'=>1, 'default'=>'', 'other'=>'' ,'desc'=>'验证（全局）')']
     ],
 ];

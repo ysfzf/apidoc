@@ -1,40 +1,37 @@
-## 使用方法
-这是一个轻量级的在laravel上使用的接口文档自动生成工具包。这个项目来源于[ThinkPHP5的相同工具](https://github.com/skywalkerwei/yapi)，感谢原作者的付出。
+## About
+This is an automatic API interface document generation tool based on laravel.
 
-#### 安装
+## Requirements
+* PHP >= 7.0.0
+* Laravel >= 5.5.0
+* Fileinfo PHP Extension
 
-1  使用composer安装依赖
+## Installation
+ 
+First
 ```
 composer require ycpfzf/apidoc
 ```
-2  在config/app.php中添加服务项
+
+Then run these commands to publish assets and config：
+ 
 ````
- 'providers' => [
-        ...
-
-     Ycpfzf\Apidoc\DocServiceProvider::class,
-
- ]
+php artisan vendor:publish --provider="Ycpfzf\Apidoc\DocServiceProvider"
 ````
-3  发布资源
-````
-php artisan vendor:publish
-````
-在列表中选择 Ycpfzf\Apidoc\DocServiceProvider，运行完毕会在config文件夹生成配置文件doc.php
-,在public目录生成apidoc/assets目录，这里面是需要用到的css和js文件。
 
+## Config
 
-#### 使用
+The file config/admin.php contains an array of configurations, you can find the default configurations in there.
 
-1 在配置文件中添加需要生成文档的控制器类名
+ 
 ````
  'controller' => [
-        //需要生成文档的类
+      
         'App\Http\Controllers\Api\Index'
     ],
 ````
 
-2 在控制器类中添加注释，例如：
+Add comments to the controller class, for example:
 ````
 <?php
 namespace App\Http\Controllers\Api;
@@ -71,6 +68,7 @@ class Index extends Controller
     }
 }
 ````
-3 在浏览器打开 你的域名/doc 就可以看到接口文档了
+Open the http://your-url/doc to view the API documentation
+ 
 
 

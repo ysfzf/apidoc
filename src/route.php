@@ -10,8 +10,6 @@ Route::group([
     $router->get('list', 'DocController@getList');
     $router->any('search', 'DocController@search');
     $router->get('info', 'DocController@getInfo');
-    $router->get('test', function(){
-        echo 'ok';
-    });
+     
 
 });
