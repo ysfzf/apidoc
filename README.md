@@ -31,6 +31,8 @@ The file config/admin.php contains an array of configurations, you can find the 
     ],
 ````
 
+## Use
+
 Add comments to the controller class, for example:
 ````
 <?php
@@ -70,5 +72,12 @@ class Index extends Controller
 ````
 Open the http://your-url/doc to view the API documentation
  
+## Security Vulnerabilities
+
+ If you discover a security vulnerability, please send an email [ysfzf@hotmail.com](mailto:ysfzf@hotmail.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The APIDOC is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 

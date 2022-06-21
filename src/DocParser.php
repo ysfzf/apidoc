@@ -123,6 +123,7 @@ class DocParser
             'string' => '字符串',
             'int' => '整型',
             'float' => '浮点型',
+            'nuermic' => '数字型',
             'boolean' => '布尔型',
             'date' => '日期',
             'array' => '数组',
